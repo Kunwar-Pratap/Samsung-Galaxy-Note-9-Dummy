@@ -1,0 +1,388 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}
+
+:root {
+    --main-bg-color: #00040d;
+    --primary-color: #ffffff;
+    --border-color: rgba(144, 144, 144, 0.3);
+    --brand-color: #ddd;
+    --container-bg-color: radial-gradient(circle at 50% 50%, rgba(0, 67, 255, 0.82) 0%, rgba(0, 128, 0, 1) 100%);
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    gap: 15rem;
+    align-items: center;
+    background: var(--container-bg-color);
+
+}
+
+.phone_wrapper {
+    min-width: 20vw;
+    min-height: 78vh;
+    padding: 0 9px;
+    border-radius: 20px;
+    background-color: var(--main-bg-color);
+    border-radius: 22px;
+    position: relative;
+}
+
+.volume_button {
+    position: absolute;
+    height: 120px;
+    width: 4px;
+    background-color: var(--main-bg-color);
+    top: 16%;
+    left: -3px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.bixby_button {
+    position: absolute;
+    height: 50px;
+    width: 4px;
+    background-color: var(--main-bg-color);
+    top: 38%;
+    left: -3px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+
+}
+.lock_button {
+    position: absolute;
+    height: 50px;
+    width: 4px;
+    background-color: var(--main-bg-color);
+    top: 32%;
+    right: -3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+
+}
+
+.phone_header {
+    width: 100%;
+    height: 40px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.led_with_lenses {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+
+}
+
+.led {
+    padding: 4px;
+    border-radius: 50%;
+    background-color: #545454;
+    height: 6px;
+}
+
+.lens1 {
+    padding: 8px;
+    background-image: linear-gradient(155deg,
+            hsl(0deg 100% 50%) 0%,
+            hsl(0deg 89% 54%) 4%,
+            hsl(0deg 79% 55%) 9%,
+            hsl(0deg 68% 55%) 15%,
+            hsl(0deg 57% 54%) 22%,
+            hsl(0deg 46% 52%) 31%,
+            hsl(0deg 35% 51%) 44%,
+            hsl(0deg 26% 49%) 65%,
+            hsl(0deg 16% 46%) 90%,
+            hsl(0deg 4% 43%) 100%);
+    border-radius: 50%;
+    height: 6px;
+
+}
+
+.lens2 {
+    padding: 7px;
+    background-color: #545454;
+    border-radius: 50%;
+    height: 6px;
+
+}
+
+.lens3 {
+    padding: 6px;
+    background-color: #545454;
+    border-radius: 50%;
+    height: 6px;
+
+}
+
+.speaker {
+    height: 4px;
+    width: 80px;
+    background-color: #545454;
+    padding: 4px;
+    border-radius: 20px;
+}
+
+.camera_with_lens {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+}
+
+.front_camera {
+    height: 8px;
+    padding: 10px;
+    background-color: #545454;
+    border-radius: 50%;
+}
+
+.camera_lens {
+    height: 6px;
+    padding: 8px;
+    background-color: #545454;
+    border-radius: 50%;
+}
+
+.phone_display {
+    /* border: 2px solid yellow; */
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    background-color: #FF3CAC;
+    background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+    border-radius: 12px;
+    /* padding: 0px 18px; */
+}
+
+.phone_navbar {
+    display: flex;
+    align-items: center;
+    padding: 3px 14px;
+    justify-content: space-between;
+
+}
+
+.telecommunications {
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.phone_navbar_menu {
+    display: flex;
+    gap: 40px;
+    gap: 7px;
+    align-items: center;
+}
+
+.icon {
+    height: 12px;
+    filter: invert(1);
+}
+
+.battery_percentage {
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 2px;
+    color: var(--primary-color);
+}
+
+.time_dock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.iris_image {
+    margin-bottom: 12px;
+}
+
+.iris_image img {
+    filter: invert(1);
+    height: 15px;
+    animation: iris_animation 2s infinite  ease-in-out ;
+}
+
+@keyframes iris_animation {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.time {
+    font-size: 5rem;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #ccc;
+}
+
+.date {
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 3px;
+    letter-spacing: 1px;
+    color: var(--primary-color);
+}
+
+.phone_user {
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: var(--primary-color);
+}
+
+.phone_unlock {
+    position: absolute;
+    bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    /* border: 2px solid green; */
+}
+
+.stop_iris_icon {
+    font-size: 17px;
+    padding: 4px 8px;
+    margin-bottom: 3px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.1);
+    color: var(--primary-color);
+}
+
+.stop_iris {
+    font-size: 17px;
+    letter-spacing: 1px;
+    color: var(--primary-color);
+}
+
+.camera_dock {
+    position: absolute;
+    bottom: 16px;
+    right: 20px;
+}
+
+.camera_dock img {
+    height: 20px;
+}
+
+/*! Touch pen */
+
+.touch_pen_wrapper {
+    min-width: 36px;
+    min-height: 60vh;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(20deg);
+}
+
+.pen_cap {
+    position: absolute;
+    height: 7px;
+    width: 30px;
+    background-color: var(--main-bg-color);
+    top: 0;
+    border-radius: 2px;
+
+}
+
+.pen_handle {
+    position: absolute;
+    height: 16px;
+    width: 14px;
+    background-color: var(--main-bg-color);
+    top: 6px;
+}
+
+.pen_top {
+    position: absolute;
+    height: 140px;
+    width: 25px;
+    background-color: var(--main-bg-color);
+    top: 21px;
+    border-radius: 3px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.pen_top .pen_brand {
+    color: var(--brand-color);
+    position: absolute;
+    top: 42%;
+    left: -110%;
+    transform: rotate(270deg);
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: none;
+    font-size: 15px;
+}
+
+.pen_center {
+    position: absolute;
+    height: 300px;
+    width: 25px;
+    background-color: var(--main-bg-color);
+    top: 161px;
+    border-radius: 3px;
+}
+
+.pen_center .pen_button {
+    height: 50px;
+    width: 14px;
+    position: absolute;
+    top: 55%;
+    left: 20%;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: none;
+
+
+}
+
+.pen_bottom {
+    position: absolute;
+    height: 100px;
+    width: 25px;
+    background-color: var(--main-bg-color);
+    top: 461px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    z-index: 20;
+}
+
+.pen_nozzle {
+    position: absolute;
+    height: 12px;
+    width: 4px;
+    background-color: var(--primary-color);
+    top: 560px;
+    z-index: 10;
+
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
